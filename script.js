@@ -113,8 +113,8 @@ function handleCellClick(e) {
     computerCell.classList.add('taken');
 
     if (checkWinner(board, COMPUTER)) {
-        document.getElementById('message').innerText = "Computer Wins!";
-        document.getElementById("message").style.color = "#8B0000";
+        document.getElementById('message').innerText = "Computer Wins!"; 
+        document.getElementById("message").style.color = "#8FBC8F";
         return;
     }
 
