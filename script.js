@@ -8,6 +8,7 @@ function startGame() {
     board = Array(9).fill(null);
     currentPlayer = HUMAN;
     document.getElementById('message').innerText = "Your Turn!";
+    document.getElementById("message").style.color = "white";
     const gameBoard = document.getElementById('game-board');
     gameBoard.innerHTML = '';
     for (let i = 0; i < 9; i++) {
@@ -94,11 +95,13 @@ function handleCellClick(e) {
 
     if (checkWinner(board, HUMAN)) {
         document.getElementById('message').innerText = "You Win!";
+        document.getElementById("message").style.color = "green";
         return;
     }
 
     if (!board.includes(null)) {
         document.getElementById('message').innerText = "It's a Draw!";
+        document.getElementById("message").style.color = "#FFFF00";
         return;
     }
 
@@ -110,15 +113,18 @@ function handleCellClick(e) {
 
     if (checkWinner(board, COMPUTER)) {
         document.getElementById('message').innerText = "Computer Wins!";
+        document.getElementById("message").style.color = "#8B0000";
         return;
     }
 
     if (!board.includes(null)) {
         document.getElementById('message').innerText = "It's a Draw!";
+        document.getElementById("message").style.color = "#FFFF00";
         return;
     }
 
     document.getElementById('message').innerText = "Your Turn!";
+    document.getElementById("message").style.color = "white";
 }
 
 // Initialize the game

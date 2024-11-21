@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f3f4f6;
+    text-align: center; 
+    background-color: #1b1e1f;
     margin: 0;
     padding: 0;
 }
@@ -9,29 +9,32 @@ body {
 .container {
     max-width: 400px;
     margin: 50px auto;
-    padding: 20px;
-    background: white;
+    padding: 20px; 
+    background-color: #323637;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     margin: 0 0 20px;
-    font-size: 24px;
-    color: #333;
+    font-size: 24px; 
+    color: rgb(226, 81, 8);
 }
 
 #game-board {
+  
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    margin: 20px 0;
+    margin: 20px 0; 
 }
 
-.cell {
+/* .cell {
     width: 100px;
     height: 100px;
-    background-color: #ddd;
+    color: rgb(226, 81, 8);
+   
+    background-color: #636060;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,30 +42,48 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
+} */
+
+
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;  
+    color: #FFF;
+    font-size: 2.5rem;
+    cursor: pointer; 
+    border: 2px solid  rgb(226, 81, 8);
+    border-radius: 30px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.cell.taken {
-    background-color: #bbb;
+
+.cell.taken { 
+    background-color: #464242;
     cursor: not-allowed;
 }
 
 #message {
     font-size: 18px;
-    color: #555;
+    color: #555555;
 }
 
 #restart {
     padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #0077b5;
+    font-size: 16px; 
+    color: #00FFFF; 
+    background-color: #4b4d4e; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#restart:hover {
-    background-color: #005983;
+#restart:hover { 
+    background-color:  rgb(45, 43, 43);
 }
 
 .center-button {
@@ -73,16 +94,16 @@ h1 {
     margin-top: 10px;
     display: inline-block;
     padding: 15px 25px;
-    font-size: 18px;
-    color: white;
-    background-color: #1b1e1f; /* LinkedIn blue */
+    font-size: 18px; 
+    color: #f7f2f4; 
+    background-color:#0077B5; 
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s ease;
   }
   
   .button:hover {
-    background-color: #299d82;
+    background-color: #005983;
   } 
 
   .center-div {
